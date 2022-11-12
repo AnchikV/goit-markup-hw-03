@@ -176,6 +176,7 @@ p {
   font-size: 14px;
   line-height: calc(24 / 14);
   color: var(--text-color);
+  
 }
 .h {
   font-weight: 700;

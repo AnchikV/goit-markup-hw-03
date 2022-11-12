@@ -110,7 +110,6 @@ p {
   padding-bottom: 200px;
 }
 .h1-hero {
-  margin-top: 0;
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
@@ -146,12 +145,11 @@ p {
 }
 
 .h2-about {
-  margin-top: 0;
   padding: 0;
   color: var(--white-color);
 }
 .h3-about {
-  margin-top: 0;
+  margin-bottom: 10px;
   padding: 0;
   font-size: 14px;
   line-height: calc(16 / 14);

@@ -15,6 +15,11 @@ h3,
 p {
   margin: 0;
 }
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 .body {
   font-family: "Roboto", sans-serif;
   color: var(--main-color);
@@ -30,15 +35,17 @@ p {
 }
 .container {
   width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .section {
   padding-bottom: 94px;
   padding-top: 94px;
 }
 .page-header {
-  padding-top: 32px;
+  border-bottom: 1px;
 }
 .header-container {
   display: flex;
@@ -80,6 +87,9 @@ p {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--main-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: block;
 }
 .header-list-link:hover,
 .header-list-link:focus {
@@ -110,13 +120,14 @@ p {
   padding-bottom: 200px;
 }
 .h1-hero {
-  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
+  width: 696px;
+  margin: 0 auto 30px;
 }
 
 .button {
@@ -128,6 +139,7 @@ p {
   cursor: pointer;
   padding: 10px 32px;
   border-radius: 4px;
+  border: none;
 }
 .button:hover,
 .button:focus {
@@ -143,10 +155,8 @@ p {
 .h {
   text-align: center;
 }
-
-.h2-about {
-  padding: 0;
-  color: var(--white-color);
+.section-work {
+  padding-top: 0;
 }
 .h3-about {
   padding: 0;
@@ -156,19 +166,25 @@ p {
 }
 .work {
   display: flex;
-  align-items: center;
+  gap: 30px;
 }
 .work .item {
-  width: calc((100%-30px) / 3);
+  width: calc((100%-60px) / 3);
 }
 .our-team {
   background: var(--team-background);
 }
-.team {
+.team-list {
   display: flex;
+  gap: 30px;
 }
 .team .item {
-  width: calc((100%-30px) / 4);
+  width: calc((100%-90px) / 4);
+  background-color: var(--white-color);
+}
+.team {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .p-about {
   font-weight: 400;
@@ -189,23 +205,26 @@ p {
   line-height: calc(19 / 16);
   text-align: center;
   margin-bottom: 10px;
-  margin-top: 30px;
 }
 .p-team {
   font-weight: 400;
   font-size: 16px;
   line-height: calc(19 / 16);
   color: var(--text-color);
-  margin-bottom: 30px;
   text-align: center;
 }
 .footer-container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer-list {
+address {
   margin-top: 20px;
 }
+
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .button-p {
   font-weight: 500;
   font-size: 16px;
@@ -216,29 +235,54 @@ p {
   cursor: pointer;
   padding: 6px 22px;
   border-radius: 4px;
+  border: none;
 }
 .button-p:hover,
 .button-p:focus {
   background: var(--active-color);
   color: var(--white-color);
 }
-
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 .item-button-p:not(:last-child) {
   margin-right: 8px;
 }
 .portfolio-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
-}
-.portfolio-item {
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
-  width: 370px;
-  height: 404px;
+  margin-bottom: 50px;
 }
 
+.portfolio-list-img {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.portfolio-item {
+  flex-basis: calc((100%-60px) / 3);
+  background: #ffffff;
+  box-sizing: border-box;
+}
+.portfolio {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
 .h-portfolio {
   font-weight: 700;
   font-size: 18px;
@@ -246,8 +290,6 @@ p {
   color: var(--main-color);
   text-align: flex-start;
   margin-bottom: 4px;
-  margin-top: 20px;
-  margin-left: 24px;
 }
 .p-portfolio {
   font-weight: 400;
@@ -255,14 +297,8 @@ p {
   line-height: calc(30 / 16);
   color: var(--text-color);
   text-align: flex-start;
-  margin-bottom: 20px;
-  margin-left: 24px;
 }
-.portfolio-img {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
+
 .footer {
   background: var(--hero-background);
 }
